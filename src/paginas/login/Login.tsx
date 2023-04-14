@@ -1,76 +1,89 @@
 import React from "react";
-
-import "./Login.css";
-import { Grid, Typography, TextField, Button } from "@material-ui/core";
+import { Grid, TextField, Typography, Button } from "@material-ui/core";
 import { Box } from "@mui/material";
 import { Link } from "react-router-dom";
+import "./Login.css";
 
 function Login() {
   return (
-    <Grid container direction="row" justifyContent="center" alignItems="center">
-      <Grid xs={6} alignItems="center">
-        <Box paddingX={20}>
+    <Grid
+      className="container"
+      container
+      direction="row"
+      justifyContent="center"
+      alignItems="center"
+    >
+      <Grid className="container-form" alignItems="center" xs={6}>
+        <Box className="container-inputs" paddingX={20}>
           <form>
             <Typography
+              className="titulo-form"
               variant="h3"
               gutterBottom
-              color="textPrimary"
+              component="h3"
               align="center"
-              className="negrito"
             >
               Entrar
             </Typography>
             <TextField
               id="usuario"
-              label="Nome do Usuario"
+              label="usuário"
               variant="outlined"
               name="usuario"
               margin="normal"
               fullWidth
-            ></TextField>
+            />
             <TextField
               id="senha"
-              label="Digite sua Senha"
+              label="senha"
               variant="outlined"
               name="senha"
               margin="normal"
-              fullWidth
               type="password"
-            ></TextField>
-
+              fullWidth
+            />
             <Box marginTop={2} textAlign="center">
-              <Link to="/home" className="text-decoration-none">
-                <Button type="submit" variant="contained" className="botao">
+              <Link to="/home" className="link-login">
+                <Button
+                  className="botao-enviar"
+                  type="submit"
+                  variant="contained"
+                >
                   Logar
                 </Button>
               </Link>
             </Box>
           </form>
-
-          <Box display="flex" justifyContent="center" marginTop={2}>
+          <Box display="flex" justifyContent="center" marginTop={3}>
             <Box marginRight={1}>
-              <Typography variant="subtitle1" gutterBottom align="center">
-                Não possui uma conta?
-              </Typography>
-            </Box>
-
-            <Link to="/cadastro" style={{ color: "black" }}>
               <Typography
                 variant="subtitle1"
                 gutterBottom
                 align="center"
-                className="negrito"
+                className="legenda-login"
               >
-                Cadastre-se
+                Não tem uma conta?
               </Typography>
-            </Link>
+            </Box>
+            <Typography
+              variant="subtitle1"
+              gutterBottom
+              align="center"
+              className="legenda-cadastrar"
+            >
+              <Link to="/cadastro">Cadastre-se</Link>
+            </Typography>
           </Box>
         </Box>
       </Grid>
-
-      <Grid xs={6} className="bg-image"></Grid>
+      <Grid xs={5} className="img">
+        <img
+          className="img-principal"
+          src="./src/assets/astronauta.png"
+          alt=""
+        />
+      </Grid>
     </Grid>
   );
 }
-
 export default Login;
