@@ -1,16 +1,17 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import Navbar from "./components/estaticos/navbar/Navbar";
+import Home from "./paginas/home/Home";
+import Footer from "./components/estaticos/footer/Footer";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
-  return (
-    <>
-    <h1>Teste</h1>
-    <h2>Teste</h2>
-    <h3>Teste</h3>
-    </>
-  )
+  return <>
+  <Navbar />
+  <Home />
+  <Footer />
+  </>;
 }
 
-export default App
+export default App;
