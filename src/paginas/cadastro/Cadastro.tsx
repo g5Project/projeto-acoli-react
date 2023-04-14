@@ -57,7 +57,7 @@ export default function Cadastro() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign up
+          Cadastrar
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
@@ -69,7 +69,7 @@ export default function Cadastro() {
                 required
                 fullWidth
                 id="firstName"
-                label="First Name"
+                label="Nome"
                 autoFocus
               />
             </Grid>
@@ -79,7 +79,7 @@ export default function Cadastro() {
                 required
                 fullWidth
                 id="lastName"
-                label="Last Name"
+                label="Sobrenome"
                 name="lastName"
                 autoComplete="lname"
               />
@@ -90,7 +90,7 @@ export default function Cadastro() {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label="Email"
                 name="email"
                 autoComplete="email"
               />
@@ -101,7 +101,7 @@ export default function Cadastro() {
                 required
                 fullWidth
                 name="password"
-                label="Password"
+                label="Senha"
                 type="password"
                 id="password"
                 autoComplete="current-password"
@@ -110,7 +110,7 @@ export default function Cadastro() {
             <Grid item xs={12}>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label="I want to receive inspiration, marketing promotions and updates via email."
+                label="Eu quero receber atualizações das minhas postagens."
               />
             </Grid>
           </Grid>
@@ -121,11 +121,11 @@ export default function Cadastro() {
             color="primary"
             className={classes.submit}
           >
-            Sign Up
+            Cadastrar
           </Button>
           <Grid container justifyContent="flex-end">
             <Grid item>
-              <Link href="#" variant="body2">
+              <Link href="/login" variant="body2">
                 Already have an account? Sign in
               </Link>
             </Grid>
