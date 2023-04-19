@@ -1,0 +1,7 @@
+.container-cadastro {
+  height: calc(100vh - 64px);
+}
+
+.btn-cancelar {
+  margin-right: 30px !important;
+}

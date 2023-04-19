@@ -1,10 +1,10 @@
-import { useState } from "react";
-import Navbar from "./components/estaticos/navbar/Navbar";
-import Home from "./paginas/home/Home";
-import Cadastro from "./paginas/cadastro/Cadastro";
-import Footer from "./components/estaticos/footer/Footer";
-import Login from "./paginas/login/Login";
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from "./components/estaticos/navbar/Navbar";
+import Footer from "./components/estaticos/footer/Footer";
+import CadastroUsuario from "./paginas/cadastroUsuario/CadastroUsuario";
+import Home from "./paginas/home/Home";
+import Login from "./paginas/login/Login";
 import "./App.css";
 
 function App() {
@@ -13,10 +13,11 @@ function App() {
       <Navbar />
       <div style={{ minHeight: "100vh" }}>
         <Routes>
+          {" "}
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/cadastro" element={<Cadastro />} />
+          <Route path="/cadastrousuario" element={<CadastroUsuario />} />
         </Routes>
       </div>
       <Footer />
