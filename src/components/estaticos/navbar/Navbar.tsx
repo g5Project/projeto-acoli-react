@@ -51,7 +51,7 @@ function Navbar() {
               </Box>
               <Link to="/login" className="link-logout">
                 <Box className="menu-item" mx={2}>
-                  <Typography variant="h6" color="inherit">
+                  <Typography variant="h6" color="inherit" onClick={goLogout}>
                     logout
                   </Typography>
                 </Box>
