@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 
 .container-cadastro {
   height: calc(100vh - 64px);
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .container-form-cadastro {
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   padding: 20px 30px;
 }
 .formulario {
-  background-color: orange;
+  /* background-color: orange; */
 }
 
 .titulo-cadastro {
-  color: white;
-  font-family: 'Sigmar', cursive !important;
+  /* color: white; */
+  font-family: 'Open Sans', sans-serif !important;
   font-weight: bold !important;
 
 }
