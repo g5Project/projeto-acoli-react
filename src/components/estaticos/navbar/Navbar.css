@@ -1,5 +1,5 @@
 .bg-menu {
-  position: relative;
+  position: static!important;
   padding: 0 2rem;
 }
 
