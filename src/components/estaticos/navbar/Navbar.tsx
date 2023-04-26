@@ -24,7 +24,9 @@ function Navbar() {
             {/* <Typography variant="h5" color="inherit">
               Acoli
             </Typography> */}
-             <img className="menu-logo" src="./src/assets/logo.png" alt="Logo" />
+            <a href="/home">
+             <img className="menu-logo" src="./src/assets/logo-acoli.png" alt="Logo" />
+            </a>
           </Box>
 
           <div>
@@ -36,7 +38,8 @@ function Navbar() {
                   </Typography>
                 </Box>
               </Link>
-              {/* link do post */}
+
+              {/* link do posts */}
               <Box className="menu-item" mx={2}>
                 <Typography variant="h6" color="inherit">
                   postagens
