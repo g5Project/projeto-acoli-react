@@ -1,5 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
 .container-cadastro {
   height: calc(100vh - 64px);
+  background-color: blue;
+}
+
+.container-form-cadastro {
+  background-color: aliceblue;
+  padding: 20px 30px;
+}
+.formulario {
+  background-color: orange;
+}
+
+.titulo-cadastro {
+  color: white;
+  font-family: 'Sigmar', cursive !important;
+  font-weight: bold !important;
+
 }
 
 .btn-cancelar {

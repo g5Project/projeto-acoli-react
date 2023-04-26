@@ -1,6 +1,11 @@
+.menu-logo {
+ height: 50px;
+}
+
 .bg-menu {
   position: relative;
   padding: 0 2rem;
+  text-transform: capitalize;
 }
 
 .container-menu {

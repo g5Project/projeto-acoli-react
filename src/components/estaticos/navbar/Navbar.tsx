@@ -7,12 +7,14 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <>
+    <div className="navbar">
       <AppBar className="bg-menu">
         <Toolbar variant="dense" className="container-menu">
           <Box style={{ cursor: "pointer" }}>
-            <Typography variant="h5" color="inherit">
+            {/* <Typography variant="h5" color="inherit">
               Acoli
-            </Typography>
+            </Typography> */}
+             <img className="menu-logo" src="./src/assets/logo.png" alt="Logo" />
           </Box>
 
           <div>
@@ -50,6 +52,7 @@ function Navbar() {
           </div>
         </Toolbar>
       </AppBar>
+      </div>
     </>
   );
 }
