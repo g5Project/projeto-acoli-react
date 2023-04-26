@@ -86,6 +86,16 @@ function CadastroTema() {
           Cadastrar Tema
         </Typography>
         <TextField
+          value={tema.nome}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)}
+          id="nome"
+          label="nome"
+          variant="outlined"
+          name="nome"
+          margin="normal"
+          fullWidth
+        />
+        <TextField
           value={tema.descricao}
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)}
           id="descricao"

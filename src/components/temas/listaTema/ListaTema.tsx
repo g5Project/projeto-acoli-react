@@ -48,7 +48,7 @@ function ListaTema() {
           <Card variant="outlined">
             <CardContent>
               <Typography color="textSecondary" gutterBottom>
-                Tema
+                {tema.nome}
               </Typography>
               <Typography variant="h5" component="h2">
                 {tema.descricao}
