@@ -36,21 +36,29 @@ function Navbar() {
                   </Typography>
                 </Box>
               </Link>
+              {/* link do post */}
               <Box className="menu-item" mx={2}>
                 <Typography variant="h6" color="inherit">
                   postagens
                 </Typography>
               </Box>
-              <Box className="menu-item" mx={2}>
-                <Typography variant="h6" color="inherit">
-                  temas
-                </Typography>
-              </Box>
-              <Box className="menu-item" mx={2}>
-                <Typography variant="h6" color="inherit">
-                  cadastrar tema
-                </Typography>
-              </Box>
+
+              <Link to="/temas">
+                <Box className="menu-item" mx={2}>
+                  <Typography variant="h6" color="inherit">
+                    temas
+                  </Typography>
+                </Box>
+              </Link>
+
+              <Link to="/formularioTema">
+                <Box className="menu-item" mx={2}>
+                  <Typography variant="h6" color="inherit">
+                    cadastrar tema
+                  </Typography>
+                </Box>
+              </Link>
+
               <Link to="/login" className="link-logout">
                 <Box className="menu-item" mx={2}>
                   <Typography variant="h6" color="inherit" onClick={goLogout}>
