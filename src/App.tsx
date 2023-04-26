@@ -6,6 +6,7 @@ import CadastroUsuario from "./paginas/cadastroUsuario/CadastroUsuario";
 import Home from "./paginas/home/Home";
 import Login from "./paginas/login/Login";
 import CadastroTema from "./components/temas/cadastroTema/CadastroTema";
+import ListaTema from "./components/temas/listaTema/ListaTema";
 import "./App.css";
 
 function App() {
@@ -19,11 +20,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/cadastrousuario" element={<CadastroUsuario />} />
-
           <Route path="/formularioTema" element={<CadastroTema />} />
           <Route path="/formularioTema/:id" element={<CadastroTema />} />
-
-          
+          <Route path="/temas" element={<ListaTema />} />
         </Routes>
       </div>
       <Footer />
