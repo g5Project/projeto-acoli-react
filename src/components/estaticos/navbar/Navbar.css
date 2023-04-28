@@ -1,6 +1,6 @@
 .menu-logo {
  height: 50px;
- padding: 5px;
+ padding: 10px 5px;
 }
 
 .bg-menu {
@@ -14,26 +14,16 @@
   text-transform: capitalize;
 }
 
-/* .container-menu {
-  width: 100%;
-  height: 60px;
-  max-width: 1200px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-} */
-
 .container-menu {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin: 0 40px;
+  margin: 0 20px;
 }
 
 .container-menu .menu-links {
   display: flex;
-  gap: 2rem;
+  margin: 0 20px;
 }
 
 a {
@@ -44,4 +34,14 @@ a {
 
 .link-home:hover, .link-logout:hover, .menu-item:hover {
   color: orange;
+}
+
+.link-logout {
+  /* background-color: #000851; */
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.link-logout:hover {
+  border-color: orange;
 }
