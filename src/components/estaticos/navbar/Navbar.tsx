@@ -36,12 +36,13 @@ function Navbar() {
                 </Box>
               </Link>
 
-              {/* link do posts */}
-              <Box className="menu-item" mx={2}>
-                <Typography variant="h6" color="inherit">
-                  postagens
-                </Typography>
-              </Box>
+              <Link to="/posts">
+                <Box className="menu-item" mx={2}>
+                  <Typography variant="h6" color="inherit">
+                    postagens
+                  </Typography>
+                </Box>
+              </Link>
 
               <Link to="/temas">
                 <Box className="menu-item" mx={2}>
