@@ -16,13 +16,12 @@ import { buscaId, deleteId } from "../../../services/Service";
 import { TokenState } from "../../../store/tokens/tokenReducer";
 
 import "./DeletarPostagem.css";
+import useLocalStorage from "react-use-localstorage";
 
 function DeletarPostagem() {
   let history = useNavigate();
   const { id } = useParams<{ id: string }>();
-  const token = useSelector<TokenState, TokenState["tokens"]>(
-    (state) => state.tokens
-  );
+  const [token, setToken] = useLocalStorage("token");
   const [post, setPost] = useState<Postagem>();
 
   useEffect(() => {
