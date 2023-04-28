@@ -1,8 +1,9 @@
 import React from "react";
-import { Typography, Grid, Button } from "@material-ui/core";
+import { Typography, Grid, Button, Link } from "@material-ui/core";
 import { Box } from "@mui/material";
 import "./Home.css";
 import TabPostagem from "../../components/postagens/tabPostagem/TabPostagem";
+import ModalPostagem from "../../components/postagens/modalPostagem/ModalPostagem";
 
 function Home() {
   return (
@@ -38,9 +39,13 @@ function Home() {
             </Typography>
           </Box>
           <Box display="flex" justifyContent="center">
-            <Box marginRight={1}></Box>
+            <Box marginRight={1}>
+              <ModalPostagem />
+            </Box>
+
             <Button
               variant="outlined"
+              className="botao"
               style={{
                 borderColor: "white",
                 backgroundColor: "#e64f0f",
