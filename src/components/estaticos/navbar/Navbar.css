@@ -1,11 +1,12 @@
 .menu-logo {
  height: 50px;
+ padding: 5px;
 }
 
 .bg-menu {
   background: linear-gradient(
     24deg,
-    rgb(0, 33, 79) 0%,
+    #000851 0%,
     rgb(37, 152, 135) 100%
   );
   position: static!important;

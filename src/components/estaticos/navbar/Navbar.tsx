@@ -21,11 +21,8 @@ function Navbar() {
       <AppBar className="bg-menu">
         <Toolbar variant="dense" className="container-menu">
           <Box style={{ cursor: "pointer" }}>
-            {/* <Typography variant="h5" color="inherit">
-              Acoli
-            </Typography> */}
             <a href="/home">
-             <img className="menu-logo" src="./src/assets/logo-acoli.png" alt="Logo" />
+             <img className="menu-logo" src="./src/assets/logoAcoli.svg" alt="Logo" />
             </a>
           </Box>
 
