@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { Box } from "@mui/material";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Postagem from "../../../models/Postagem";
+import { busca } from "../../../services/Service";
 import {
   Card,
   CardActions,
@@ -8,33 +9,25 @@ import {
   Button,
   Typography,
 } from "@material-ui/core";
-
+import { Box } from "@mui/material";
 import "./ListaPostagem.css";
-import Postagem from "../../../models/Postagem";
 import useLocalStorage from "react-use-localstorage";
-import { busca } from "../../../services/Service";
-import { useSelector } from "react-redux";
-import { TokenState } from "../../../store/tokens/tokenReducer";
-// import { toast } from "react-toastify";
+import { useNavigate, useParams } from "react-router-dom";
 
 function ListaPostagem() {
   const [posts, setPosts] = useState<Postagem[]>([]);
-
+  const [token, setToken] = useLocalStorage("token");
   let navigate = useNavigate();
-
-  const token = useSelector<TokenState, TokenState["tokens"]>(
-    (state) => state.tokens
-  );
 
   useEffect(() => {
     if (token == "") {
-      alert("Você precisa estar logado")
+      alert("Você precisa estar logado");
       navigate("/login");
     }
   }, [token]);
 
   async function getPost() {
-    await busca(`/postagens`, setPosts, {
+    await busca("/postagens", setPosts, {
       headers: {
         Authorization: token,
       },
@@ -64,7 +57,6 @@ function ListaPostagem() {
                 {post.tema?.descricao}
               </Typography>
             </CardContent>
-
             <CardActions>
               <Box display="flex" justifyContent="center" mb={1.5}>
                 <Link
@@ -78,18 +70,17 @@ function ListaPostagem() {
                       size="small"
                       color="primary"
                     >
-                      Atualizar
+                      atualizar
                     </Button>
                   </Box>
                 </Link>
-
                 <Link
                   to={`/deletarPostagem/${post.id}`}
                   className="text-decorator-none"
                 >
                   <Box mx={1}>
-                    <Button variant="outlined" size="small" color="secondary">
-                      Deletar
+                    <Button variant="contained" size="small" color="secondary">
+                      deletar
                     </Button>
                   </Box>
                 </Link>
