@@ -59,7 +59,7 @@ function CadastroUsuario() {
   </Grid> */}
       <Grid className="container-form-cadastro" item xs={4} alignItems="center">
         <Box>
-          <form onSubmit={onSubmit} className="formulario">
+          <form onSubmit={onSubmit} className="form-tema">
             <Typography className="titulo-cadastro" variant="h3" gutterBottom component="h3" align="center" >
               Entrar
             </Typography>

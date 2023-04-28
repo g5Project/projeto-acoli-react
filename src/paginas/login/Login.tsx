@@ -87,7 +87,7 @@ function Login() {
               fullWidth
             />
             <Box marginTop={2} textAlign="center">
-              <Button className="btn-enviar" type="submit" variant="contained">
+              <Button className="btn-logar" type="submit" variant="contained">
                 Logar
               </Button>
             </Box>

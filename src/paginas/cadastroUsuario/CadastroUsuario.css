@@ -2,6 +2,7 @@
 
 .container-cadastro {
   height: calc(100vh - 64px);
+  width: 100vh;
   /* background-color: blue; */
 }
 
@@ -9,17 +10,38 @@
   /* background-color: aliceblue; */
   padding: 20px 30px;
 }
-.formulario {
-  /* background-color: orange; */
-}
+
+/* .formulario {
+  background-color: orange;
+} */
 
 .titulo-cadastro {
-  /* color: white; */
+  color: rgb(0, 16, 94); 
   font-family: 'Open Sans', sans-serif !important;
-  font-weight: bold !important;
 
+}
+
+.btn-cancelar, .btn-cadastrar {
+  margin-top: 20px !important;
+}
+
+.btn-cadastrar {
+  color: white !important;
+ background-color: #02ab96 !important;
+}
+
+.btn-cadastrar:hover {
+ background-color: rgb(129, 199, 24) !important;
 }
 
 .btn-cancelar {
+  color: white !important;
   margin-right: 30px !important;
+  background-color: rgb(3, 28, 151) !important;
+}
+
+.btn-cancelar:hover {
+  color: white !important;
+  margin-right: 30px !important;
+  background-color: rgb(0, 16, 94) !important;
 }
