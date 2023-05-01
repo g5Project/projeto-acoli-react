@@ -5,6 +5,8 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { Typography, Grid } from "@material-ui/core";
 import { Box } from "@mui/material";
 
+import "./Footer.css";
+
 function Footer() {
   return (
     <>
@@ -15,7 +17,7 @@ function Footer() {
         alignItems="center"
       >
         <Grid alignItems="center" item xs={12}>
-          <Box style={{ backgroundColor: "#3F51B5", height: "120px" }}>
+          <Box className="container-redes-sociais" >
             <Box
               paddingTop={1}
               display="flex"
@@ -27,7 +29,7 @@ function Footer() {
                 align="center"
                 gutterBottom
                 style={{ color: "white" }}
-              >
+                className="titulo-redes-sociais" >
                 Siga-nos nas redes sociais{" "}
               </Typography>
             </Box>
@@ -36,23 +38,23 @@ function Footer() {
                 href="https://www.facebook.com/generationbrasil"
                 target="_blank"
               >
-                <FacebookIcon style={{ fontSize: 60, color: "white" }} />
+                <FacebookIcon className="social-icon" />
               </a>
               <a
                 href="https://www.instagram.com/generationbrasil/"
                 target="_blank"
               >
-                <InstagramIcon style={{ fontSize: 60, color: "white" }} />
+                <InstagramIcon className="social-icon" />
               </a>
               <a
                 href="https://www.linkedin.com/school/generationbrasil/"
                 target="_blank"
               >
-                <LinkedInIcon style={{ fontSize: 60, color: "white" }} />
+                <LinkedInIcon className="social-icon" />
               </a>
             </Box>
           </Box>
-          <Box style={{ backgroundColor: "#303F9F", height: "60px" }}>
+          <Box style={{ backgroundColor: "#000851", height: "60px" }}>
             <Box paddingTop={1}>
               <Typography
                 variant="subtitle2"
@@ -64,14 +66,13 @@ function Footer() {
               </Typography>
             </Box>
             <Box>
-              <a target="_blank" href="https://brasil.generation.org">
+              <a target="_blank" href="https://github.com/g5Project">
                 <Typography
                   variant="subtitle2"
                   gutterBottom
                   style={{ color: "white" }}
-                  align="center"
-                >
-                  brasil.generation.org
+                  align="center" >
+                  github.com/g5Project
                 </Typography>
               </a>
             </Box>

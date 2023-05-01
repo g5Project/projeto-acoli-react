@@ -7,11 +7,11 @@ import Home from "./paginas/home/Home";
 import Login from "./paginas/login/Login";
 import CadastroTema from "./components/temas/cadastroTema/CadastroTema";
 import ListaTema from "./components/temas/listaTema/ListaTema";
-import "./App.css";
 import DeletarTema from "./components/temas/deletarTema/DeletarTema";
 import ListaPostagem from "./components/postagens/listaPostagens/ListaPostagem";
 import DeletarPostagem from "./components/postagens/deletarPostagem/DeletarPostagem";
 import CadastroPost from "./components/postagens/cadastroPost/CadastroPost";
+import "./App.css";
 
 function App() {
   return (
