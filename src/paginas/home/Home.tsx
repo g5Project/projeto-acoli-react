@@ -15,15 +15,15 @@ function Home() {
         alignItems="center"
         className="container-principal-home"
       >
-        <Grid alignItems="center" item xs={6}>
-          <Box paddingX={20}>
+        <Grid alignItems="center" item xs={7}>
+          <Box>
             <Typography
               variant="h3"
               gutterBottom
               color="textPrimary"
               component="h3"
               align="center"
-              style={{ color: "#000851", fontWeight: "bold" }}
+              style={{ color: "#000851", fontWeight: "bold", fontSize:"2rem" }}
             >
               Seja bem vindo(a)!
             </Typography>
@@ -56,7 +56,7 @@ function Home() {
             </Button>
           </Box>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={3}>
           <img
             className="img-principal"
             src="./src/assets/ilustracao.svg"

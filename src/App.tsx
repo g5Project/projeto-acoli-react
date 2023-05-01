@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/estaticos/navbar/Navbar";
 import Footer from "./components/estaticos/footer/Footer";
@@ -12,11 +12,26 @@ import ListaPostagem from "./components/postagens/listaPostagens/ListaPostagem";
 import DeletarPostagem from "./components/postagens/deletarPostagem/DeletarPostagem";
 import CadastroPost from "./components/postagens/cadastroPost/CadastroPost";
 import "./App.css";
+import Sidebar from "./components/estaticos/sidebar/Sidebar";
+import { Box, Stack, ThemeProvider, createTheme } from "@mui/material";
+import Rightbar from "./components/estaticos/rightbar/Rightbar";
 
 function App() {
+  const [mode, setMode] = useState("light");
+
+  const darkTheme = createTheme({
+    palette: {
+      mode: 'dark',
+    },
+  });
+
   return (
     <BrowserRouter>
+    <ThemeProvider theme={darkTheme}></ThemeProvider>
+    <Box bgcolor={"background.default"} color={"text.primary"}></Box>
       <Navbar />
+      <Stack direction="row" spacing={2} justifyContent="space-between">
+      <Sidebar {...setMode} {...setMode}/>
       <div style={{ minHeight: "100vh" }}>
         <Routes>
           <Route path="/" element={<Login />} />
@@ -36,6 +51,8 @@ function App() {
           <Route path="/deletarTema/:id" element={<DeletarTema />} />
         </Routes>
       </div>
+      <Rightbar />
+      </Stack>
       <Footer />
     </BrowserRouter>
   );
