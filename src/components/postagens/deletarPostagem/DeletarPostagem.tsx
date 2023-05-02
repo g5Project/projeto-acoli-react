@@ -21,7 +21,9 @@ import useLocalStorage from "react-use-localstorage";
 function DeletarPostagem() {
   let history = useNavigate();
   const { id } = useParams<{ id: string }>();
-  const [token, setToken] = useLocalStorage("token");
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
   const [post, setPost] = useState<Postagem>();
 
   useEffect(() => {

@@ -12,7 +12,9 @@ import {
 } from "@material-ui/core";
 import "./CadastroPost.css";
 import { useNavigate, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 import useLocalStorage from "react-use-localstorage";
+import { TokenState } from "../../../store/tokens/tokenReducer";
 import Tema from "../../../models/Tema";
 import Postagem from "../../../models/Postagem";
 import { busca, buscaId, post, put } from "../../../services/Service";
@@ -22,7 +24,9 @@ function CadastroPost() {
 
   const { id } = useParams<{ id: string }>();
 
-  const [token, setToken] = useLocalStorage("token");
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
 
   const [temas, setTemas] = useState<Tema[]>([]);
 
