@@ -1,21 +1,18 @@
-import {
-    Avatar,
-    AvatarGroup,
-    Box,
-    Divider,
-    ImageList,
-    ImageListItem,
-    List,
-    ListItem,
-    ListItemAvatar,
-    ListItemText,
-    Typography,
-  } from "@mui/material";
-  import React from "react";
+import { Avatar, AvatarGroup, Box, Divider, ImageList, ImageListItem, List, ListItem, ListItemAvatar, ListItemText, Typography } from "@mui/material";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import useLocalStorage from "react-use-localstorage";
   
   const Rightbar = () => {
-    return (
-      <Box flex={2} p={5} sx={{ display: { xs: "none", sm: "block" } }} style={{background:"white"}}>
+
+    const [token, setToken] = useLocalStorage("token");
+    let navigate = useNavigate();
+
+    var rightbarComponent
+
+    if (token != "") {
+        rightbarComponent = 
+        <Box flex={2} p={5} sx={{ display: { xs: "none", sm: "block" } }} style={{background:"white"}}>
         <Box position="relative" width={300}>
           <Typography variant="h6" fontWeight={100} paddingBottom={2}>
             Amigos Parceiros
@@ -150,6 +147,10 @@ import {
       </List>
         </Box>
       </Box>
+      }
+
+    return (
+     <>{rightbarComponent}</>
     );
   };
   

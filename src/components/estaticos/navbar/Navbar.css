@@ -4,14 +4,8 @@
 }
 
 .navbar-container {
-  background: linear-gradient(
-    24deg,
-    #000851 0%,
-    rgb(37, 152, 135) 100%
-  );
-  /* position: static!important;
-  padding: 0 2rem;
-  text-transform: capitalize; */
+  background-image: linear-gradient(to right, green, blue) !important;
+
 }
 
 .container-menu {

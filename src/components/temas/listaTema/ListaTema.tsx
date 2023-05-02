@@ -50,7 +50,7 @@ function ListaTema() {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        className="container-principal-home"
+        className="container-principal-tema"
       >
         <Box m={2}>
           <Card variant="outlined">

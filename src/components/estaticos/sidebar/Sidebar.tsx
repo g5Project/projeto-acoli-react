@@ -1,10 +1,19 @@
 import React from "react";
 import { AccountBox, Article, Group, Home, ModeNight, Person, Settings, Storefront } from "@mui/icons-material";
 import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from "@mui/material";
+import useLocalStorage from "react-use-localstorage";
+import { useNavigate } from "react-router-dom";
 
   function Sidebar() {
-    return (
-      <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block"} }} style={{background:"white"}}>
+
+    const [token, setToken] = useLocalStorage("token");
+    let navigate = useNavigate();
+
+    var sidebarComponent
+
+    if (token != "") {
+        sidebarComponent = 
+        <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block"} }} style={{background:"white"}}>
         <Box position="relative">
 
           <List>
@@ -21,10 +30,10 @@ import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch
                 <ListItemIcon>
                   <Article />
                 </ListItemIcon>
-
                 <ListItemText primary="Postagens" />
               </ListItemButton>
             </ListItem>
+
             <ListItem disablePadding>
               <ListItemButton component="a" href="/temas">
                 <ListItemIcon>
@@ -78,6 +87,10 @@ import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch
           </List>
         </Box>
       </Box>
+    }
+
+    return (
+     <>{sidebarComponent}</>
     );
   };
 

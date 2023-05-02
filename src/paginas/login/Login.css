@@ -14,6 +14,10 @@
   font-family: "Poppins", sans-serif !important;
 }
 
+.form-login:nth-child(2) {
+  margin-bottom: 40px;
+}
+
 label {
   color: rgb(162, 161, 161) !important;
   font-family: "Poppins", sans-serif !important;

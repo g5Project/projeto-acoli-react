@@ -55,7 +55,7 @@ function Login() {
     >
       <Grid className="container-form-login" alignItems="center" xs={6}>
         <Box className="container-inputs" paddingX={20}>
-          <form onSubmit={onSubmit}>
+          <form onSubmit={onSubmit} className="form-login">
             <Typography
               className="titulo-login"
               variant="h3"

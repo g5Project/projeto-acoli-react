@@ -1,83 +1,3 @@
-// import React from "react";
-// import { AppBar, Toolbar, Typography } from "@material-ui/core";
-// import { Link, useNavigate } from "react-router-dom";
-// import useLocalStorage from "react-use-localstorage";
-// import { Box } from "@mui/material";
-// import "./Navbar.css";
-
-// function Navbar() {
-//   const [token, setToken] = useLocalStorage("token");
-//   let navigate = useNavigate();
-
-//   function goLogout() {
-//     setToken("");
-//     alert("Usuário deslogado");
-//     navigate("/login");
-//   }
-
-//   return (
-//     <>
-//     <div className="navbar">
-//       <AppBar className="bg-menu">
-//         <Toolbar variant="dense" className="container-menu">
-//           <Box style={{ cursor: "pointer" }}>
-//             <a href="/home">
-//              <img className="menu-logo" src="./src/assets/logo-acoli.svg" alt="Logo" />
-//             </a>
-//           </Box>
-
-//           <div>
-//             <Box className="menu-links" display="flex">
-//               <Link to="/home" className="link-home">
-//                 <Box className="menu-item" mx={2}>
-//                   <Typography variant="h6" color="inherit">
-//                     home
-//                   </Typography>
-//                 </Box>
-//               </Link>
-
-//               <Link to="/posts">
-//                 <Box className="menu-item" mx={2}>
-//                   <Typography variant="h6" color="inherit">
-//                     postagens
-//                   </Typography>
-//                 </Box>
-//               </Link>
-
-//               <Link to="/temas">
-//                 <Box className="menu-item" mx={2}>
-//                   <Typography variant="h6" color="inherit">
-//                     temas
-//                   </Typography>
-//                 </Box>
-//               </Link>
-
-//               <Link to="/formularioTema">
-//                 <Box className="menu-item" mx={2}>
-//                   <Typography variant="h6" color="inherit">
-//                     cadastrar tema
-//                   </Typography>
-//                 </Box>
-//               </Link>
-
-//               <Link to="/login" className="link-logout">
-//                 <Box className="menu-item" mx={2}>
-//                   <Typography variant="h6" color="inherit" onClick={goLogout}>
-//                     logout
-//                   </Typography>
-//                 </Box>
-//               </Link>
-//             </Box>
-//           </div>
-//         </Toolbar>
-//       </AppBar>
-//       </div>
-//     </>
-//   );
-// }
-// export default Navbar;
-
-
 import { Mail, Notifications, Pets } from "@mui/icons-material";
 import { AppBar, Avatar, Badge, Box, InputBase, Menu, MenuItem, styled, Toolbar, alpha, Typography } from "@mui/material";
 import React, { useState } from "react";
@@ -97,11 +17,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
+  color: 'white',
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+  backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
+
   marginRight: theme.spacing(2),
   marginLeft: 0,
   width: '100%',
@@ -123,11 +45,13 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
   justifyContent: "space-between",
+  background: 'linear-gradient(45deg, #00214f 0%, #259887 100%)'
 });
 
 const Icons = styled(Box)(({ theme }) => ({
   display: "none",
   alignItems: "center",
+  color:"white",
   gap: "20px",
   [theme.breakpoints.up("sm")]: {
     display: "flex",
@@ -141,6 +65,7 @@ const UserBox = styled(Box)(({ theme }) => ({
     display: "none",
   },
 }));
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (

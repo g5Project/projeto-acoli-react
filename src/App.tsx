@@ -28,7 +28,7 @@ function App() {
   return (
     <BrowserRouter>
     <ThemeProvider theme={darkTheme}></ThemeProvider>
-    <Box bgcolor={"background.default"} color={"text.primary"}></Box>
+    <Box></Box>
       <Navbar />
       <Stack direction="row" spacing={2} justifyContent="space-between">
       <Sidebar {...setMode} {...setMode}/>
