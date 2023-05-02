@@ -21,8 +21,10 @@ function Navbar() {
     navigate("/login");
   }
 
-  return (
-    <>
+  var navbarComponent;
+
+  if (token != "") {
+    navbarComponent = (
       <div className="navbar">
         <AppBar className="bg-menu">
           <Toolbar variant="dense" className="container-menu">
@@ -82,7 +84,9 @@ function Navbar() {
           </Toolbar>
         </AppBar>
       </div>
-    </>
-  );
+    );
+  }
+
+  return <>{navbarComponent}</>;
 }
 export default Navbar;
