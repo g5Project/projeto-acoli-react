@@ -6,6 +6,7 @@ import {
   CardContent,
   Button,
   Typography,
+  Grid,
 } from "@material-ui/core";
 import Tema from "../../../models/Tema";
 import { Box } from "@mui/material";
@@ -44,6 +45,13 @@ function ListaTema() {
   return (
     <>
       {temas.map((tema) => (
+        <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        className="container-principal-home"
+      >
         <Box m={2}>
           <Card variant="outlined">
             <CardContent>
@@ -85,6 +93,7 @@ function ListaTema() {
             </CardActions>
           </Card>
         </Box>
+        </Grid>
       ))}
     </>
   );

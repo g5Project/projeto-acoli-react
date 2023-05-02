@@ -15,12 +15,12 @@ import {
   
   const Rightbar = () => {
     return (
-      <Box flex={2} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
+      <Box flex={2} p={5} sx={{ display: { xs: "none", sm: "block" } }} style={{background:"white"}}>
         <Box position="relative" width={300}>
-          <Typography variant="h6" fontWeight={100}>
-            Online Friends
+          <Typography variant="h6" fontWeight={100} paddingBottom={2}>
+            Amigos Parceiros
           </Typography>
-          <AvatarGroup max={7}>
+          <AvatarGroup max={9}>
             <Avatar
               alt="Remy Sharp"
               src="https://material-ui.com/static/images/avatar/1.jpg"
@@ -55,8 +55,8 @@ import {
               src="https://material-ui.com/static/images/avatar/8.jpg"
             />
           </AvatarGroup>
-          <Typography variant="h6" fontWeight={100} mt={2} mb={2}>
-            Latest Photos
+          <Typography variant="h6" fontWeight={100} mt={2} mb={2} paddingTop={2}>
+            Veja também
           </Typography>
           <ImageList cols={3} rowHeight={100} gap={5}>
             <ImageListItem>
@@ -78,8 +78,8 @@ import {
               />
             </ImageListItem>
           </ImageList>
-          <Typography variant="h6" fontWeight={100} mt={2}>
-            Latest Conversations
+          <Typography variant="h6" fontWeight={100} mt={2} paddingTop={3}>
+            Mensagens
           </Typography>
           <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
         <ListItem alignItems="flex-start">

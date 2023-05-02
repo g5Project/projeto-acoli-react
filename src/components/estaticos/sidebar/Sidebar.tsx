@@ -1,35 +1,19 @@
-import {
-    AccountBox,
-    Article,
-    Group,
-    Home,
-    ModeNight,
-    Person,
-    Settings,
-    Storefront,
-  } from "@mui/icons-material";
-  import {
-    Box,
-    List,
-    ListItem,
-    ListItemButton,
-    ListItemIcon,
-    ListItemText,
-    Switch,
-  } from "@mui/material";
-  import React from "react";
+import React from "react";
+import { AccountBox, Article, Group, Home, ModeNight, Person, Settings, Storefront } from "@mui/icons-material";
+import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from "@mui/material";
 
   function Sidebar() {
     return (
-      <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block"} }} >
+      <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block"} }} style={{background:"white"}}>
         <Box position="relative">
+
           <List>
             <ListItem disablePadding>
               <ListItemButton component="a" href="#home">
                 <ListItemIcon>
                   <Home />
                 </ListItemIcon>
-                <ListItemText primary="Homepage" />
+                <ListItemText primary="Home" />
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -37,7 +21,9 @@ import {
                 <ListItemIcon>
                   <Article />
                 </ListItemIcon>
-                <ListItemText primary="Pages" />
+
+
+                <ListItemText primary="Postagens" />
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -45,15 +31,17 @@ import {
                 <ListItemIcon>
                   <Group />
                 </ListItemIcon>
-                <ListItemText primary="Groups" />
+                <ListItemText primary="Temas" />
               </ListItemButton>
             </ListItem>
+
+
             <ListItem disablePadding>
               <ListItemButton component="a" href="#simple-list">
                 <ListItemIcon>
                   <Storefront />
                 </ListItemIcon>
-                <ListItemText primary="Marketplace" />
+                <ListItemText primary="Cadastrar Tema" />
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -61,7 +49,7 @@ import {
                 <ListItemIcon>
                   <Person />
                 </ListItemIcon>
-                <ListItemText primary="Friends" />
+                <ListItemText primary="Criar Post" />
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -69,7 +57,7 @@ import {
                 <ListItemIcon>
                   <Settings />
                 </ListItemIcon>
-                <ListItemText primary="Settings" />
+                <ListItemText primary="Configurações" />
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -77,21 +65,21 @@ import {
                 <ListItemIcon>
                   <AccountBox />
                 </ListItemIcon>
-                <ListItemText primary="Profile" />
+                <ListItemText primary="Perfil" />
               </ListItemButton>
             </ListItem>
-            <ListItem disablePadding>
+            {/* <ListItem disablePadding>
               <ListItemButton component="a" href="#simple-list">
                 <ListItemIcon>
                   <ModeNight />
                 </ListItemIcon>
-                {/* <Switch onChange={e=>setMode(mode === "light" ? "dark" : "light")}/> */}
+                <Switch onChange={e=>setMode(mode === "light" ? "dark" : "light")}/>
               </ListItemButton>
-            </ListItem>
+            </ListItem> */}
           </List>
         </Box>
       </Box>
     );
   };
-  
+
   export default Sidebar;

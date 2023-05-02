@@ -13,7 +13,7 @@ function Home() {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        className="container-principal-home"
+        className="container-principal-home"        
       >
         <Grid alignItems="center" item xs={7}>
           <Box>
