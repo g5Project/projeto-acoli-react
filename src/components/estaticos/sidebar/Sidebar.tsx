@@ -9,7 +9,7 @@ import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch
 
           <List>
             <ListItem disablePadding>
-              <ListItemButton component="a" href="#home">
+              <ListItemButton component="a" href="/home">
                 <ListItemIcon>
                   <Home />
                 </ListItemIcon>
@@ -17,17 +17,16 @@ import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
-              <ListItemButton component="a" href="#simple-list">
+              <ListItemButton component="a" href="/posts">
                 <ListItemIcon>
                   <Article />
                 </ListItemIcon>
-
 
                 <ListItemText primary="Postagens" />
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
-              <ListItemButton component="a" href="#simple-list">
+              <ListItemButton component="a" href="/temas">
                 <ListItemIcon>
                   <Group />
                 </ListItemIcon>
@@ -37,7 +36,7 @@ import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch
 
 
             <ListItem disablePadding>
-              <ListItemButton component="a" href="#simple-list">
+              <ListItemButton component="a" href="/formularioTema">
                 <ListItemIcon>
                   <Storefront />
                 </ListItemIcon>
@@ -45,7 +44,7 @@ import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
-              <ListItemButton component="a" href="#simple-list">
+              <ListItemButton component="a" href="/formularioPostagem">
                 <ListItemIcon>
                   <Person />
                 </ListItemIcon>
@@ -61,11 +60,11 @@ import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
-              <ListItemButton component="a" href="#simple-list">
+              <ListItemButton component="a" href="/login">
                 <ListItemIcon>
                   <AccountBox />
                 </ListItemIcon>
-                <ListItemText primary="Perfil" />
+                <ListItemText primary="Sair" />
               </ListItemButton>
             </ListItem>
             {/* <ListItem disablePadding>

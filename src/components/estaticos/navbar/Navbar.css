@@ -1,4 +1,59 @@
 .menu-logo {
+ height: 50px;
+ padding: 10px 5px;
+}
+
+.navbar-container {
+  background: linear-gradient(
+    24deg,
+    #000851 0%,
+    rgb(37, 152, 135) 100%
+  );
+  /* position: static!important;
+  padding: 0 2rem;
+  text-transform: capitalize; */
+}
+
+.container-menu {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+.container-menu .menu-links {
+  display: flex;
+  margin: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.link-home:hover, .link-logout:hover, .menu-item:hover {
+  color: orange;
+}
+
+.link-logout {
+  color: white;
+  background-color: #000851;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: orange;
+}
+
+.link-logout:hover {
+  color: white ;
+  background-color: orangered;
+
+}
+
+
+
+
+/* .menu-logo {
   height: 50px;
   padding: 10px 5px;
  }
@@ -44,4 +99,4 @@
  
  .link-logout:hover {
    border-color: orange;
- }
+ } */
