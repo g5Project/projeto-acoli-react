@@ -7,6 +7,7 @@ import "./Home.css";
 import TabPostagem from "../../components/postagens/tabPostagem/TabPostagem";
 import ModalPostagem from "../../components/postagens/modalPostagem/ModalPostagem";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Home() {
   let navigate = useNavigate();
@@ -16,7 +17,16 @@ function Home() {
 
   useEffect(() => {
     if (token == "") {
-      alert("Você precisa estar logado");
+      toast.error("Você precisa estar logado", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+        theme: "colored",
+      });
       navigate("login");
     }
   }, [token]);

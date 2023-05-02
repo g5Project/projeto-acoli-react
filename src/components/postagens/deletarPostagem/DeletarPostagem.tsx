@@ -9,7 +9,6 @@ import {
 } from "@material-ui/core";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-// import { toast } from "react-toastify";
 
 import Postagem from "../../../models/Postagem";
 import { buscaId, deleteId } from "../../../services/Service";
@@ -17,9 +16,10 @@ import { TokenState } from "../../../store/tokens/tokenReducer";
 
 import "./DeletarPostagem.css";
 import useLocalStorage from "react-use-localstorage";
+import { toast } from "react-toastify";
 
 function DeletarPostagem() {
-  let history = useNavigate();
+  let navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
@@ -28,8 +28,17 @@ function DeletarPostagem() {
 
   useEffect(() => {
     if (token === "") {
-      alert("Você precisa estar logado!");
-      history("/login");
+      toast.error("Você precisa estar logado", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+        theme: "colored",
+      });
+      navigate("/login");
     }
   }, [token]);
 
@@ -48,23 +57,31 @@ function DeletarPostagem() {
   }
 
   async function sim() {
-    history("/posts"); //rota do front-end
+    navigate("/posts");
 
     try {
       await deleteId(`/postagens/${id}`, {
-        //rota do back-end
         headers: {
           Authorization: token,
         },
       });
-      alert("Postagem deletada com sucesso!");
+      toast.success("Postagem deletada com sucesso", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+        theme: "colored",
+      });
     } catch (error) {
       alert("Erro ao deletar!");
     }
   }
 
   function nao() {
-    history("/posts");
+    navigate("/posts");
   }
 
   return (

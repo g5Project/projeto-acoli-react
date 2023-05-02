@@ -7,6 +7,7 @@ import { TokenState } from "../../../store/tokens/tokenReducer";
 import { addToken } from "../../../store/tokens/actions";
 import { Box } from "@mui/material";
 import "./Navbar.css";
+import { toast } from "react-toastify";
 
 function Navbar() {
   const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -17,7 +18,16 @@ function Navbar() {
 
   function goLogout() {
     dispatch(addToken(""));
-    alert("Usuário deslogado");
+    toast.info("Usuário deslogado", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined,
+      theme: "colored",
+    });
     navigate("/login");
   }
 
@@ -90,3 +100,4 @@ function Navbar() {
   return <>{navbarComponent}</>;
 }
 export default Navbar;
+
