@@ -1,57 +1,61 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 import {
   Card,
   CardActions,
   CardContent,
   Button,
-  Typography
-} from '@material-ui/core'
-import { Box } from '@mui/material'
-import './DeletarTema.css'
-import { useParams, useNavigate } from 'react-router-dom'
-import { buscaId, deleteId } from '../../../services/Service'
-import Tema from '../../../models/Tema'
-import useLocalStorage from 'react-use-localstorage'
+  Typography,
+} from "@material-ui/core";
+import { Box } from "@mui/material";
+import "./DeletarTema.css";
+import { useParams, useNavigate } from "react-router-dom";
+import { buscaId, deleteId } from "../../../services/Service";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../../store/tokens/tokenReducer";
+import Tema from "../../../models/Tema";
+import useLocalStorage from "react-use-localstorage";
 
 function DeletarTema() {
-  let navigate = useNavigate()
-  const { id } = useParams<{ id: string }>()
-  const [token, setToken] = useLocalStorage('token')
-  const [tema, setTema] = useState<Tema>()
+  let navigate = useNavigate();
+  const { id } = useParams<{ id: string }>();
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
+  const [tema, setTema] = useState<Tema>();
 
   useEffect(() => {
-    if (token === '') {
-      alert('Você precisa estar logado')
-      navigate('/login')
+    if (token === "") {
+      alert("Você precisa estar logado");
+      navigate("/login");
     }
-  }, [token])
+  }, [token]);
 
   useEffect(() => {
     if (id !== undefined) {
-      findById(id)
+      findById(id);
     }
-  }, [id])
+  }, [id]);
 
   async function findById(id: string) {
     buscaId(`/temas/${id}`, setTema, {
       headers: {
-        Authorization: token
-      }
-    })
+        Authorization: token,
+      },
+    });
   }
 
   function sim() {
-    navigate('/temas')
+    navigate("/temas");
     deleteId(`/temas/${id}`, {
       headers: {
-        Authorization: token
-      }
-    })
-    alert('Tema deletado com sucesso')
+        Authorization: token,
+      },
+    });
+    alert("Tema deletado com sucesso");
   }
 
   function nao() {
-    navigate('/temas')
+    navigate("/temas");
   }
 
   return (
@@ -94,6 +98,6 @@ function DeletarTema() {
         </Card>
       </Box>
     </>
-  )
+  );
 }
-export default DeletarTema
+export default DeletarTema;

@@ -3,6 +3,8 @@ import { Container, Typography, TextField, Button } from "@material-ui/core";
 import "./CadastroTema.css";
 import { useNavigate, useParams } from "react-router-dom";
 import useLocalStorage from "react-use-localstorage";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../../store/tokens/tokenReducer";
 import Tema from "../../../models/Tema";
 import { buscaId, post, put } from "../../../services/Service";
 
@@ -11,7 +13,9 @@ function CadastroTema() {
 
   const { id } = useParams<{ id: string }>();
 
-  const [token, setToken] = useLocalStorage("token");
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
 
   const [tema, setTema] = useState<Tema>({
     id: 0,
@@ -106,7 +110,12 @@ function CadastroTema() {
           margin="normal"
           fullWidth
         />
-        <Button type="submit" variant="contained" color="primary" className="btn-finalizar">
+        <Button
+          type="submit"
+          variant="contained"
+          color="primary"
+          className="btn-finalizar"
+        >
           Finalizar
         </Button>
       </form>
