@@ -1,0 +1,12 @@
+.titulo {
+  color: blue;
+  text-align: center;
+}
+
+.container-principal-home {
+  background-image: url("../../assets/Frame1.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}

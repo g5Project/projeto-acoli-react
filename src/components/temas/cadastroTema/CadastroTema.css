@@ -1,0 +1,16 @@
+/* .container-tema {
+    height: calc(100vh - 64px);
+    background-color: aqua;
+} */
+
+.formulario-cadastrar-tema {
+  margin-top: 4rem;
+}
+.titulo-cadastrar-tema {
+  padding: 20px;
+  color: rgb(0, 16, 94) !important;
+}
+.btn-finalizar {
+  margin-top: 30px !important;
+  background-color: rgb(0, 16, 94) !important;
+}
