@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Provider } from "react-redux";
+import { ToastContainer } from "react-toastify";
+
 import Navbar from "./components/estaticos/navbar/Navbar";
 import Footer from "./components/estaticos/footer/Footer";
 import CadastroUsuario from "./paginas/cadastroUsuario/CadastroUsuario";
@@ -7,18 +10,16 @@ import Home from "./paginas/home/Home";
 import Login from "./paginas/login/Login";
 import CadastroTema from "./components/temas/cadastroTema/CadastroTema";
 import ListaTema from "./components/temas/listaTema/ListaTema";
-import "./App.css";
 import DeletarTema from "./components/temas/deletarTema/DeletarTema";
 import ListaPostagem from "./components/postagens/listaPostagens/ListaPostagem";
 import DeletarPostagem from "./components/postagens/deletarPostagem/DeletarPostagem";
 import CadastroPost from "./components/postagens/cadastroPost/CadastroPost";
-import { Provider } from "react-redux";
 import store from "./store/store";
-import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Sidebar from "./components/estaticos/sidebar/Sidebar";
-import { Box, Stack, ThemeProvider, createTheme } from "@mui/material";
 import Rightbar from "./components/estaticos/rightbar/Rightbar";
+
+import "./App.css";
 
 function App() {
   return (
@@ -26,9 +27,9 @@ function App() {
       <ToastContainer />
       <BrowserRouter>
       <Navbar />
-      <Stack direction="row" spacing={2} justifyContent="space-between">
+      <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "stretch" }}>
         <Sidebar />
-        <div style={{ minHeight: "100vh" }}>
+        <div style={{ minHeight: "100vh", flex:5, margin: "10px 20px", borderRadius: "20px"}}>
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/home" element={<Home />} />
@@ -48,11 +49,10 @@ function App() {
           </Routes>
         </div>
         <Rightbar />
-        </Stack>
+        </div>
         <Footer />
       </BrowserRouter>
     </Provider>
   );
 }
-
 export default App;

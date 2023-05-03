@@ -28,7 +28,7 @@ const Search = styled("div")(({ theme }) => ({
   position: "relative",
   color: "white",
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  backgroundColor: alpha(theme.palette.common.white, 0.20),
   "&:hover": {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
@@ -110,7 +110,7 @@ function Navbar() {
               className="nav-logo"
               src="./src/assets/logo-acoli.svg"
               alt="Logo"
-              height={"50"}
+              height={"40"}
             />
           </a>
           <Search>
@@ -131,14 +131,14 @@ function Navbar() {
             </Badge>
             <Avatar
               sx={{ width: 30, height: 30 }}
-              src="https://images.pexels.com/photos/1870376/pexels-photo-1870376.jpeg"
+              src="./src/assets/user.svg"
               onClick={(e) => setOpen(true)}
             />
           </Icons>
           <UserBox onClick={(e) => setOpen(true)}>
             <Avatar
               sx={{ width: 30, height: 30 }}
-              src="https://images.pexels.com/photos/1870376/pexels-photo-1870376.jpeg"
+              src="./src/assets/user.svg"
             />
             <Typography>Rosangela</Typography>
           </UserBox>

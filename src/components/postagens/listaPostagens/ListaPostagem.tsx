@@ -92,9 +92,8 @@ function ListaPostagem() {
                 <Box mx={1}>
                   <Button
                     variant="contained"
-                    className="marginLeft"
                     size="small"
-                    color="primary"
+                    className="btn-atualizar"
                   >
                     atualizar
                   </Button>
@@ -102,7 +101,7 @@ function ListaPostagem() {
               </Link>
               <Link to={`/deletarPostagem/${post.id}`}>
                 <Box mx={1}>
-                  <Button variant="contained" size="small" color="secondary">
+                  <Button variant="contained" size="small" className="btn-deletar">
                     deletar
                   </Button>
                 </Box>

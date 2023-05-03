@@ -1,5 +1,5 @@
 import React from "react";
-import { AccountBox, Article, Group, Home, ModeNight, Person, Settings, Storefront } from "@mui/icons-material";
+import { AccountBox, AccountCircle, Add, AddPhotoAlternate, AddToPhotos, Apps, Article, AutoAwesomeMotion, Group, Home, ModeNight, Person, Settings, Storefront } from "@mui/icons-material";
 import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -42,7 +42,7 @@ function Sidebar() {
         sx={{ display: { xs: "none", sm: "block" } }}
         style={{ background: "white" }}
       >
-        <Box position="relative">
+        <Box position="relative" mt={2}>
           <List>
             <ListItem disablePadding>
               <Link to="/home" className="cor">
@@ -59,9 +59,20 @@ function Sidebar() {
               <Link to="/posts" className="cor">
                 <ListItemButton component="a">
                   <ListItemIcon>
-                    <Article />
+                    <Apps />
                   </ListItemIcon>
                   <ListItemText primary="Postagens" />
+                </ListItemButton>
+              </Link>
+            </ListItem>
+
+            <ListItem disablePadding>
+              <Link to="/formularioPostagem" className="cor">
+                <ListItemButton component="a" href="/formularioPostagem">
+                  <ListItemIcon>
+                  <AddPhotoAlternate />
+                  </ListItemIcon>
+                  <ListItemText primary="Criar Post" />
                 </ListItemButton>
               </Link>
             </ListItem>
@@ -70,7 +81,7 @@ function Sidebar() {
               <Link to="/temas" className="cor">
                 <ListItemButton component="a">
                   <ListItemIcon>
-                    <Group />
+                    <AutoAwesomeMotion />
                   </ListItemIcon>
                   <ListItemText primary="Temas" />
                 </ListItemButton>
@@ -81,20 +92,9 @@ function Sidebar() {
               <Link to="/formularioTema" className="cor">
                 <ListItemButton component="a" href="/formularioTema">
                   <ListItemIcon>
-                    <Storefront />
+                    <Add />
                   </ListItemIcon>
                   <ListItemText primary="Cadastrar Tema" />
-                </ListItemButton>
-              </Link>
-            </ListItem>
-
-            <ListItem disablePadding>
-              <Link to="/formularioPostagem" className="cor">
-                <ListItemButton component="a" href="/formularioPostagem">
-                  <ListItemIcon>
-                    <Person />
-                  </ListItemIcon>
-                  <ListItemText primary="Criar Post" />
                 </ListItemButton>
               </Link>
             </ListItem>
@@ -112,7 +112,7 @@ function Sidebar() {
               <Link to="/login" className="cor">
                 <ListItemButton component="a" href="/login" onClick={goLogout}>
                   <ListItemIcon>
-                    <AccountBox />
+                    <AccountCircle />
                   </ListItemIcon>
                   <ListItemText primary="Sair" />
                 </ListItemButton>

@@ -1,10 +1,11 @@
-/* .container-tema {
-    height: calc(100vh - 64px);
-    background-color: aqua;
-} */
+.container-tema {
+  height: 100vh;
+  background-color: white;
+  border-radius: 10px;
+}
 
 .formulario-cadastrar-tema {
-  margin-top: 4rem;
+  margin-top: 0.5rem;
 }
 .titulo-cadastrar-tema {
   padding: 20px;

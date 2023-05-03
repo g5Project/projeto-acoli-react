@@ -82,10 +82,11 @@ function CadastroUsuario() {
       justifyContent="center"
       alignItems="center"
     >
-      {/* <Grid item xs={6} className="img-cadastro">
+      <Grid item xs={5} className="img-cadastro">
         <img className="img-cadastro" src="./src/assets/foguete.svg" alt="" />
-  </Grid> */}
-      <Grid className="container-form-cadastro" item xs={4} alignItems="center">
+  </Grid>
+
+      <Grid className="container-form-cadastro" item xs={6} alignItems="center">
         <Box>
           <form onSubmit={onSubmit} className="form-tema">
             <Typography

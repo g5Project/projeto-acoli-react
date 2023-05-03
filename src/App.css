@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
 
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap"); */
 
 * {
     margin: 0;
@@ -12,11 +11,10 @@ a {
 }
 
 body {
-    background: rgb(246, 253, 247);
+    background: rgb(241, 241, 241);
 }
 
 p {
     padding-top: .5rem;
-    font-size: 1.3rem !important;
 }
 

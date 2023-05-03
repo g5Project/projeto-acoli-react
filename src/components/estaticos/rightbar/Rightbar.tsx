@@ -19,7 +19,7 @@ const Rightbar = () => {
   if (token != "") {
     rightbarComponent = (
       <Box
-        flex={2}
+        flex={1}
         p={5}
         sx={{ display: { xs: "none", sm: "block" } }}
         style={{ background: "white" }}
@@ -28,40 +28,25 @@ const Rightbar = () => {
           <Typography variant="h6" fontWeight={100} paddingBottom={2}>
             Amigos Parceiros
           </Typography>
-          <AvatarGroup max={9}>
+          <AvatarGroup max={5}>
             <Avatar
               alt="Amigos do Bem"
-              src="https://material-ui.com/static/images/avatar/1.jpg"
+              src="https://d3p2amk7tvag7f.cloudfront.net/brands/265749b3e5e35289aaca862ca9e4d2ba68d85639.png"
+            />
+            <Avatar
+              alt="Ipred"
+              src=""
             />
             <Avatar
               alt="Amigos do Bem"
-              src="https://material-ui.com/static/images/avatar/2.jpg"
-            />
-            <Avatar
-              alt="Amigos do Bem"
-              src="https://material-ui.com/static/images/avatar/3.jpg"
+              src=""
             />
             <Avatar alt="Amigos do Bem" src="" />
             <Avatar
               alt="Amigos do Bem"
-              src="https://material-ui.com/static/images/avatar/6.jpg"
+              src=""
             />
-            <Avatar
-              alt="Amigos do Bem"
-              src="https://material-ui.com/static/images/avatar/7.jpg"
-            />
-            <Avatar
-              alt="Amigos do Bem"
-              src="https://material-ui.com/static/images/avatar/8.jpg"
-            />
-            <Avatar
-              alt="Amigos do Bem"
-              src="https://material-ui.com/static/images/avatar/7.jpg"
-            />
-            <Avatar
-              alt="Amigos do Bem"
-              src="https://material-ui.com/static/images/avatar/8.jpg"
-            />
+            
           </AvatarGroup>
           <Typography
             variant="h6"
@@ -75,19 +60,19 @@ const Rightbar = () => {
           <ImageList cols={3} rowHeight={100} gap={5}>
             <ImageListItem>
               <img
-                src="https://material-ui.com/static/images/image-list/breakfast.jpg"
+                src="https://img.freepik.com/free-photo/man-taking-care-his-farm-close-up_23-2148580028.jpg?w=900&t=st=1683131650~exp=1683132250~hmac=10b1f11da91237ba0ff87b3340b04c94112e8f985eb72c3dfc0c2027ddddbacf"
                 alt=""
               />
             </ImageListItem>
             <ImageListItem>
               <img
-                src="https://material-ui.com/static/images/image-list/burgers.jpg"
+                src="https://img.freepik.com/free-photo/senior-hardworking-farmer-agronomist-soybean-field-checking-crops-before-harvest_342744-1260.jpg?w=1060&t=st=1683131658~exp=1683132258~hmac=489cdd74c0ab9af3f5e4d3eb068f773adc800f34f338e0de5bf1ede1cefdb4df"
                 alt=""
               />
             </ImageListItem>
             <ImageListItem>
               <img
-                src="https://material-ui.com/static/images/image-list/camera.jpg"
+                src="https://img.freepik.com/free-photo/close-up-box-with-ripe-vegetables_329181-4612.jpg?w=1060&t=st=1683131815~exp=1683132415~hmac=e1c663fe562d3bf377f371318dd6780647c727b922395e514e3946bdc848bffb"
                 alt=""
               />
             </ImageListItem>
