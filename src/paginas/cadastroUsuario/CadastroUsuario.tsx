@@ -79,7 +79,7 @@ function CadastroUsuario() {
       <Grid className="container-vazio2" alignItems="center" xs={12}>
         <img
           className="logo2"
-          src="./src/assets/logo-acoli.svg"
+          src="https://svgshare.com/i/soQ.svg"
           alt="acoliLogo"
         />
       </Grid>
@@ -105,7 +105,7 @@ function CadastroUsuario() {
                 component="h3"
                 align="center"
               >
-                Entrar
+                Cadastrar
               </Typography>
               <TextField
                 value={user.nome}
