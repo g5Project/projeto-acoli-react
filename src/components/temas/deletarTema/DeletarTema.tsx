@@ -97,7 +97,7 @@ function DeletarTema() {
                   variant="contained"
                   className="marginLeft"
                   size="large"
-                  color="#000851"
+                  color="primary"
                 >
                   Sim
                 </Button>
