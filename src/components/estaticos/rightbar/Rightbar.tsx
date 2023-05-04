@@ -1,28 +1,40 @@
-import React from "react";
-import { Avatar, AvatarGroup, Box, Divider, ImageList, ImageListItem, List, ListItem, ListItemAvatar, ListItemText, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
-import useLocalStorage from "react-use-localstorage";
-import { useSelector } from "react-redux";
+import React from 'react'
+import {
+  Avatar,
+  AvatarGroup,
+  Box,
+  Divider,
+  ImageList,
+  ImageListItem,
+  List,
+  ListItem,
+  ListItemAvatar,
+  ListItemText,
+  Typography
+} from '@mui/material'
+import { useNavigate } from 'react-router-dom'
+import useLocalStorage from 'react-use-localstorage'
+import { useSelector } from 'react-redux'
 
-import { TokenState } from "../../../store/tokens/tokenReducer";
+import { TokenState } from '../../../store/tokens/tokenReducer'
 
-import "./Rightbar.css";
+import './Rightbar.css'
 
 const Rightbar = () => {
-  const token = useSelector<TokenState, TokenState["tokens"]>(
-    (state) => state.tokens
-  );
-  let navigate = useNavigate();
+  const token = useSelector<TokenState, TokenState['tokens']>(
+    state => state.tokens
+  )
+  let navigate = useNavigate()
 
-  var rightbarComponent;
+  var rightbarComponent
 
-  if (token != "") {
+  if (token != '') {
     rightbarComponent = (
       <Box
         flex={1}
         p={5}
-        sx={{ display: { xs: "none", sm: "block" } }}
-        style={{ background: "white" }}
+        sx={{ display: { xs: 'none', sm: 'block' } }}
+        style={{ background: 'white' }}
       >
         <Box position="relative" width={300}>
           <Typography variant="h6" fontWeight={100} paddingBottom={2}>
@@ -33,20 +45,10 @@ const Rightbar = () => {
               alt="Amigos do Bem"
               src="https://d3p2amk7tvag7f.cloudfront.net/brands/265749b3e5e35289aaca862ca9e4d2ba68d85639.png"
             />
-            <Avatar
-              alt="Ipred"
-              src=""
-            />
-            <Avatar
-              alt="Amigos do Bem"
-              src=""
-            />
+            <Avatar alt="Ipred" src="" />
             <Avatar alt="Amigos do Bem" src="" />
-            <Avatar
-              alt="Amigos do Bem"
-              src=""
-            />
-            
+            <Avatar alt="Amigos do Bem" src="" />
+            <Avatar alt="Amigos do Bem" src="" />
           </AvatarGroup>
           <Typography
             variant="h6"
@@ -81,28 +83,52 @@ const Rightbar = () => {
             Mensagens
           </Typography>
           <List
-            sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+            sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
           >
             <ListItem alignItems="flex-start">
               <ListItemAvatar>
+                <Avatar alt="Remy Sharp" src="" />
+              </ListItemAvatar>
+              <ListItemText
+                primary="Luis Guerreiro"
+                secondary={
+                  <React.Fragment>
+                    <Typography
+                      sx={{ display: 'inline' }}
+                      component="span"
+                      variant="body2"
+                      color="text.primary"
+                    >
+                      Luis Guerreiro
+                    </Typography>
+                    {' — Estou aprendendo tanto aqui que...'}
+                  </React.Fragment>
+                }
+              />
+            </ListItem>
+            <Divider variant="inset" component="li" />
+            <ListItem alignItems="flex-start">
+              <ListItemAvatar>
                 <Avatar
-                  alt="Remy Sharp"
-                  src="https://material-ui.com/static/images/avatar/3.jpg"
+                  alt="Yuri Oliveira"
+                  src="https://avatars.githubusercontent.com/u/62682253?v=4"
                 />
               </ListItemAvatar>
               <ListItemText
-                primary="Brunch this weekend?"
+                primary="Yuri Oliveira"
                 secondary={
                   <React.Fragment>
                     <Typography
-                      sx={{ display: "inline" }}
+                      sx={{ display: 'inline' }}
                       component="span"
                       variant="body2"
                       color="text.primary"
                     >
-                      Ali Connors
+                      para Grupo 5
                     </Typography>
-                    {" — I'll be in your neighborhood doing errands this…"}
+                    {
+                      ' — Gente, voces se superaram nessa, vou te contar viu...Parabens!'
+                    }
                   </React.Fragment>
                 }
               />
@@ -110,43 +136,21 @@ const Rightbar = () => {
             <Divider variant="inset" component="li" />
             <ListItem alignItems="flex-start">
               <ListItemAvatar>
-                <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Genadro" src="/static/images/avatar/3.jpg" />
               </ListItemAvatar>
               <ListItemText
-                primary="Summer BBQ"
+                primary="Geandro"
                 secondary={
                   <React.Fragment>
                     <Typography
-                      sx={{ display: "inline" }}
+                      sx={{ display: 'inline' }}
                       component="span"
                       variant="body2"
                       color="text.primary"
-                    >
-                      to Scott, Alex, Jennifer
-                    </Typography>
-                    {" — Wish I could come, but I'm out of town this…"}
-                  </React.Fragment>
-                }
-              />
-            </ListItem>
-            <Divider variant="inset" component="li" />
-            <ListItem alignItems="flex-start">
-              <ListItemAvatar>
-                <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
-              </ListItemAvatar>
-              <ListItemText
-                primary="Oui Oui"
-                secondary={
-                  <React.Fragment>
-                    <Typography
-                      sx={{ display: "inline" }}
-                      component="span"
-                      variant="body2"
-                      color="text.primary"
-                    >
-                      Sandra Adams
-                    </Typography>
-                    {" — Do you have Paris recommendations? Have you ever…"}
+                    ></Typography>
+                    {
+                      ' — Esse site entra para os meus top 3 melhoes sites, sinceramente...'
+                    }
                   </React.Fragment>
                 }
               />
@@ -154,10 +158,10 @@ const Rightbar = () => {
           </List>
         </Box>
       </Box>
-    );
+    )
   }
 
-  return <>{rightbarComponent}</>;
-};
+  return <>{rightbarComponent}</>
+}
 
-export default Rightbar;
+export default Rightbar
