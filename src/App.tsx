@@ -29,7 +29,7 @@ function App() {
       <Navbar />
       <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "stretch" }}>
         <Sidebar />
-        <div style={{ minHeight: "100vh", flex:5, margin: "10px 20px", borderRadius: "20px"}}>
+        <div style={{ minHeight: "100vh", flex:5 }}>
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/home" element={<Home />} />

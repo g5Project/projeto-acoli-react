@@ -4,6 +4,9 @@ import { Box } from "@mui/material";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 import { TokenState } from "../../store/tokens/tokenReducer";
 import TabPostagem from "../../components/postagens/tabPostagem/TabPostagem";
@@ -66,17 +69,28 @@ function Home() {
               à nossa rede de solidariedade!
             </Typography>
 
-            <Typography
-              variant="h5"
-              gutterBottom
-              component="h6"
-              align="center"
-              style={{ color: "#e64f0f" }}
-              className="btn-doar"
-            >
-             doar
-            </Typography>
           </Box>
+
+          <Box display="flex" alignItems="center" justifyContent="center">
+              <a
+                href="https://www.facebook.com/generationbrasil"
+                target="_blank"
+              >
+                <FacebookIcon className="social-icon-home" />
+              </a>
+              <a
+                href="https://www.instagram.com/generationbrasil/"
+                target="_blank"
+              >
+                <InstagramIcon className="social-icon-home" />
+              </a>
+              <a
+                href="https://www.linkedin.com/school/generationbrasil/"
+                target="_blank"
+              >
+                <LinkedInIcon className="social-icon-home" />
+              </a>
+            </Box>
         </Grid>
       </Grid>
         <Grid xs={12} style={{ backgroundColor: "white" }}>

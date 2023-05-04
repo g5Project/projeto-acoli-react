@@ -4,13 +4,18 @@ import { Box } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import useLocalStorage from "react-use-localstorage";
 import { login } from "../../services/Service";
+import { useDispatch } from "react-redux";
+import { addToken } from "../../store/tokens/actions";
+import { toast } from "react-toastify";
 import UserLogin from "../../models/UserLogin";
 import "./Login.css";
 
 function Login() {
-  let history = useNavigate();
+  let navigate = useNavigate();
 
-  const [token, setToken] = useLocalStorage("token");
+  const dispatch = useDispatch();
+
+  const [token, setToken] = useState("");
 
   const [userLogin, setUserLogin] = useState<UserLogin>({
     id: 0,
@@ -30,7 +35,8 @@ function Login() {
 
   useEffect(() => {
     if (token != "") {
-      history("/home");
+      dispatch(addToken(token));
+      navigate("/home");
     }
   }, [token]);
 
@@ -39,105 +45,103 @@ function Login() {
     try {
       await login(`/usuarios/logar`, userLogin, setToken);
 
-      alert("Usuário logado com sucesso!");
+      toast.success("Usuario logado com sucesso", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+        theme: "colored",
+      });
     } catch (error) {
-      alert("Dados inálidos. Erro ao logar!");
+      toast.error("Dados do usuário inconsistentes. Erro ao logar.", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+        theme: "colored",
+      });
     }
   }
 
   return (
-    <>
-      <Grid
-        container
-        className="container"
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <textPath className="text"></textPath>
-        <Grid item className="container-form-login" alignItems="center" xs={4}>
-          <Box className="container-inputs">
-            <form onSubmit={onSubmit} className="aa">
-              <Typography
-                className="titulo-login"
-                variant="h3"
-                gutterBottom
-                component="h3"
-                align="center"
-              >
-                Login
-              </Typography>
-              <div className="container-inputs-usuario">
-                <TextField
-                  value={userLogin.usuario}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    updatedModel(e)
-                  }
-                  id="usuario"
-                  label="usuário"
-                  variant="outlined"
-                  name="usuario"
-                  margin="normal"
-                  fullWidth
-                />
-              </div>
-              <div className="container-inputs-senha">
-                <TextField
-                  value={userLogin.senha}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    updatedModel(e)
-                  }
-                  id="senha"
-                  label="senha"
-                  variant="outlined"
-                  name="senha"
-                  margin="normal"
-                  type="password"
-                  fullWidth
-                />
-              </div>
-
-              <div className="s-btn-logar">
-                <Box marginTop={2} textAlign="center">
-                  <Button
-                    className="btn-logar"
-                    type="submit"
-                    variant="contained"
-                  >
-                    Logar
-                  </Button>
-                </Box>
-              </div>
-            </form>
-
-            <Box display="flex" justifyContent="center" marginTop={3}>
-              <Box marginRight={1}>
-                <Typography
-                  variant="subtitle1"
-                  gutterBottom
-                  align="center"
-                  className="legenda-login"
-                >
-                  Não tem uma conta?
-                </Typography>
-              </Box>
-
-              <Link to="/cadastrousuario">
-                <Typography
-                  variant="subtitle1"
-                  gutterBottom
-                  align="center"
-                  className="legenda-cadastrar"
-                >
-                  Cadastre-se
-                </Typography>
-              </Link>
+    <Grid
+      className="container"
+      container
+      direction="row"
+      justifyContent="space-around"
+      alignItems="center"
+    >
+      <Grid alignItems="center" xs={5}></Grid>
+      <Grid className="container-form-login" alignItems="center" xs={4}>
+        <Box className="container-inputs" paddingX={3}>
+          <form onSubmit={onSubmit}>
+            <Typography
+              className="titulo-login"
+              variant="h3"
+              gutterBottom
+              component="h3"
+              align="center"
+            >
+              Login
+            </Typography>
+            <TextField
+              value={userLogin.usuario}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+              id="usuario"
+              label="usuário"
+              variant="outlined"
+              name="usuario"
+              margin="normal"
+              fullWidth
+            />
+            <TextField
+              value={userLogin.senha}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+              id="senha"
+              label="senha"
+              variant="outlined"
+              name="senha"
+              margin="normal"
+              type="password"
+              fullWidth
+            />
+            <Box marginTop={2} textAlign="center">
+              <Button className="btn-logar" type="submit" variant="contained">
+                Logar
+              </Button>
             </Box>
+          </form>
+          <Box display="flex" justifyContent="center" marginTop={3}>
+            <Box marginRight={1}>
+              <Typography
+                variant="subtitle1"
+                gutterBottom
+                align="center"
+                className="legenda-login"
+              >
+                Não tem uma conta?
+              </Typography>
+            </Box>
+            <Link to="/cadastrousuario">
+              <Typography
+                variant="subtitle1"
+                gutterBottom
+                align="center"
+                className="legenda-cadastrar"
+              >
+                Cadastre-se
+              </Typography>
+            </Link>
           </Box>
-        </Grid>
+        </Box>
       </Grid>
-    </>
+    </Grid>
   );
 }
-
 export default Login;

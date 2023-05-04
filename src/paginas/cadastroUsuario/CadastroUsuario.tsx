@@ -79,15 +79,11 @@ function CadastroUsuario() {
       className="container-cadastro"
       container
       direction="row"
-      justifyContent="center"
+      justifyContent="space-around"
       alignItems="center"
-    >
-      <Grid item xs={5} className="img-cadastro">
-        <img className="img-cadastro" src="./src/assets/foguete.svg" alt="" />
-  </Grid>
-
-      <Grid className="container-form-cadastro" item xs={6} alignItems="center">
-        <Box>
+    >   
+      <Grid className="container-form-cadastro" item xs={4} alignItems="center" >
+        <Box paddingX={3}>
           <form onSubmit={onSubmit} className="form-tema">
             <Typography
               className="titulo-cadastro"
@@ -161,6 +157,7 @@ function CadastroUsuario() {
           </form>
         </Box>
       </Grid>
+      <Grid alignItems="center" xs={5}></Grid>
     </Grid>
   );
 }
