@@ -87,7 +87,10 @@ const Rightbar = () => {
           >
             <ListItem alignItems="flex-start">
               <ListItemAvatar>
-                <Avatar alt="Remy Sharp" src="" />
+                <Avatar
+                  alt="Luiz Guerreiro"
+                  src="https://i.ibb.co/jbfk9Y3/luiz.png"
+                />
               </ListItemAvatar>
               <ListItemText
                 primary="Luis Guerreiro"
