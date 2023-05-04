@@ -144,13 +144,14 @@ function CadastroPost() {
   }
 
   return (
-    <Container maxWidth="sm" className="topo">
-      <form onSubmit={onSubmit}>
+    <Container maxWidth="sm" className="container-post">
+      <form onSubmit={onSubmit} className="formulario-cadastrar-post">
         <Typography
           variant="h3"
           color="textSecondary"
           component="h1"
           align="center"
+          className="titulo-cadastrar-post"
         >
           Formulário de cadastro postagem
         </Typography>
@@ -195,7 +196,7 @@ function CadastroPost() {
             ))}
           </Select>
           <FormHelperText>Escolha um tema para a postagem</FormHelperText>
-          <Button type="submit" variant="contained" color="primary">
+          <Button type="submit" variant="contained" color="primary"  className="btn-finalizar">
             Finalizar
           </Button>
         </FormControl>

@@ -1,19 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap%27);
 
 .container-cadastro {
   height: calc(100vh - 64px);
   width: 100vh;
-  /* background-color: blue; */
+  background-image: url(https://svgshare.com/i/skj.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.container-vazio2{
+  max-width: 500px;
+  width: 30%;
+
+  color: rgb(0, 16, 94) !important;
+  background-color: rgba(0, 0, 0, 0.705);
+  position: absolute;
+  height: 80%;
+
+
+  border-radius: 40px;
+
+  right: 9%;
+  top: 11%;
 }
 
 .container-form-cadastro {
-  /* background-color: aliceblue; */
-  padding: 20px 30px;
+  max-width: 500px;
+  width: 30%;
+
+  color: rgb(0, 16, 94) !important;
+  background-color: white;
+  position: absolute;
+  height: 80%;
+
+
+  border-radius: 40px;
+
+  right: 10%;
+  top: 10%;
 }
 
-/* .formulario {
+.container-inputs2{
+  padding: 25px 50px;
+  font-family: "Poppins", sans-serif !important;
+
+}
+.formulario {
   background-color: orange;
-} */
+}
 
 .titulo-cadastro {
   color: rgb(0, 16, 94); 
@@ -44,4 +79,10 @@
   color: white !important;
   margin-right: 30px !important;
   background-color: rgb(0, 16, 94) !important;
+}
+.logo2{
+  position: absolute;
+  width: 100px;
+ top: 100%;
+ left: -198.10%;
 }
