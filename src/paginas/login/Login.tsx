@@ -73,7 +73,7 @@ function Login() {
       <Grid className="container-vazio" alignItems="center" xs={12}>
         <img
           className="logo"
-          src="./src/assets/logo-acoli.svg"
+          src="https://svgshare.com/i/soQ.svg"
           alt="acoliLogo"
         />
       </Grid>
